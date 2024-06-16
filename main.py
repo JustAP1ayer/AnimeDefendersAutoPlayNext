@@ -9,7 +9,7 @@ except ImportError:
 
 print("Auto Clicker Activated!")
 while True:
-    autonext = pyautogui.locateCenterOnScreen('next.png', confidence=0.9)
+    autonext = pyautogui.locateCenterOnScreen('next.png', confidence=0.75)
     if autonext:
         pyautogui.moveTo(autonext)
         time.sleep(0.06)
