@@ -14,7 +14,7 @@ print(f"Auto Clicker Activated! Waiting for the '{buttonchosen}' button.")
 while True:
     if buttonchosen == "Next":
         button = pyautogui.locateCenterOnScreen('next.png', confidence=0.75)
-    else
+    else:
         button = pyautogui.locateCenterOnScreen('replay.png', confidence=0.75)
     if button:
         pyautogui.moveTo(button)
