@@ -9,9 +9,10 @@ except ImportError:
     os.system("pip install opencv-python")
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
-print(f"Auto Clicker Activated! Waiting for the '{config["button"]}' button.")
+buttonchosen = config["button"]
+print(f"Auto Clicker Activated! Waiting for the '{buttonchosen}' button.")
 while True:
-    if config["button"]  == "Next":
+    if buttonchosen == "Next":
         button = pyautogui.locateCenterOnScreen('next.png', confidence=0.75)
     else
         button = pyautogui.locateCenterOnScreen('replay.png', confidence=0.75)
@@ -19,6 +20,6 @@ while True:
         pyautogui.moveTo(button)
         time.sleep(0.06)
         pyautogui.click()
-        print(f"Clicked '{config["button"]}' button at {button}")
+        print(f"Clicked '{buttonchosen}' button at {button}")
     else:
         time.sleep(0.1)
