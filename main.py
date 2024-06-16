@@ -1,11 +1,11 @@
-
 import os
+import time
 try:
-    import pyautogui, time, keyboard
+    import pyautogui
     # pip install opencv-python
 except ImportError:
     os.system("pip install pyautogui")
-    os.system("pip install keyboard")
+    os.system("pip install opencv-python")
 
 print("Auto Clicker Activated!")
 while True:
@@ -14,7 +14,6 @@ while True:
         pyautogui.moveTo(autonext)
         time.sleep(0.06)
         pyautogui.click()
-        print(f"Clicked buy button on {autonext}")
+        print(f"Clicked 'next' button at {autonext}")
     else:
-    time.sleep(0.1)
-    
+        time.sleep(0.1)
